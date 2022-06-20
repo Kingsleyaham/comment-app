@@ -1,0 +1,246 @@
+:root {
+  /* Primary Colors */
+  --moderate-blue: hsl(238, 40%, 52%);
+  --soft-red: hsl(358, 79%, 66%);
+  --light-grayish-blue: hsl(239, 57%, 85%);
+  --pale-red: hsl(357, 100%, 86%);
+  /* Neutral colors */
+  --dary-blue: hsl(212, 24%, 26%);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: hsl(223, 19%, 93%);
+  --very-light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: Rubik, sans-serif !important;
+  background-color: var(--very-light-gray) !important;
+  font-weight: 500 !important;
+}
+* {
+  box-sizing: border-box !important;
+}
+* p,
+span {
+  font-size: 16px;
+  color: var(--grayish-blue) !important;
+}
+
+.app {
+  width: calc(100% - 35%) !important;
+  margin: 50px auto;
+}
+
+.card {
+  border-radius: 10px !important;
+  background-color: var(--white);
+
+  margin: 10px 0px !important;
+  border: 0px !important;
+  padding: 8px 0px;
+}
+
+.likeBtn {
+  padding: 0px 22px !important;
+}
+.likeBtn > .row {
+  border-radius: 10px !important;
+  text-align: center !important;
+  background-color: var(--light-gray) !important;
+  font-weight: 500 !important;
+  font-size: 18px;
+  display: inline-block;
+  height: max-content;
+}
+.likeBtn > .row span {
+  color: var(--moderate-blue) !important;
+}
+.likeBtn > .row img {
+  width: 38px !important;
+  cursor: pointer !important;
+}
+
+.likeBtn > .row img:hover {
+  cursor: pointer;
+  filter: invert(80%) sepia(60%) saturate(800%) hue-rotate(180deg)
+    brightness(80%) contrast(70%);
+}
+
+.user > img {
+  width: 35px !important;
+}
+
+.username {
+  display: inline-block;
+  padding: 0px 7px;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--dark-blue) !important;
+}
+.time_created {
+  font-size: 17px;
+  display: inline-block;
+  padding: 0px 7px;
+}
+.badge {
+  color: var(--white) !important;
+  background-color: var(--moderate-blue) !important;
+}
+
+.reply > p {
+  text-align: right !important;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer !important;
+}
+.reply > p > span {
+  display: inline-block;
+  padding-left: 15px;
+}
+.reply > p > span > span {
+  color: var(--moderate-blue) !important;
+  font-weight: 600 !important;
+}
+.reply > p > span:hover {
+  filter: invert(70%) sepia(60%) saturate(800%) hue-rotate(180deg)
+    brightness(90%) contrast(20%);
+}
+
+button[type="submit"] {
+  background-color: var(--moderate-blue) !important;
+  border: 0 !important;
+}
+button .send:hover {
+  background-color: var(--light-grayish-blue) !important;
+}
+
+.userReply {
+  color: var(--moderate-blue) !important;
+  font-weight: 600 !important;
+}
+
+.commentReply {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  justify-content: flex-end !important;
+  padding-left: 15px;
+}
+.commentReply > div {
+  border-left: 2px solid var(--light-gray) !important;
+}
+
+.commentReply > div:first-child {
+  width: 4% !important;
+  margin: 10px 0 !important;
+  padding-left: 30px;
+}
+
+.commentReply > div:last-child {
+  width: 96% !important;
+}
+
+.delBtn {
+  color: var(--soft-red) !important;
+  font-weight: 600 !important;
+}
+.editBtn {
+  color: var(--moderate-blue) !important;
+  font-weight: 600 !important;
+}
+
+.newComment img {
+  width: 40px !important;
+}
+
+.newComment textarea:focus {
+  outline: none !important;
+  border: 1px solid var(--grayish-blue);
+  box-shadow: none !important;
+}
+.newComment .btn {
+  padding: 0.75rem 1.85rem !important;
+  background-color: var(--moderate-blue);
+  border: none !important;
+  border-radius: 10px;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+.newComment .btn:focus {
+  box-shadow: none !important;
+}
+.sendBtn {
+  text-align: right !important;
+}
+.currentUserBadge {
+  background-color: var(--moderate-blue) !important;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.currentImage > img {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.round-button:hover {
+  background-color: #fff !important;
+  color: var(--moderate-blue) !important;
+  border-color: var(--moderate-blue) !important;
+  border-width: 1.5px;
+  /* outline: none !important; */
+  box-shadow: none !important;
+  font-weight: 600;
+}
+textarea {
+  color: var(--grayish-blue) !important;
+}
+
+/* for tablet devices */
+
+@media screen and (max-width: 900px) {
+  .app {
+    width: calc(100% - 20%) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .app {
+    width: calc(100% - 10%) !important;
+  }
+  .card {
+    margin: 10px auto !important;
+  }
+  .commentReply {
+    padding-left: 20px !important;
+  }
+
+  .likeBtn {
+    padding: 0px 7px !important;
+  }
+  .likeBtn > .row {
+    display: inline-block;
+    margin: 0px 5px !important;
+  }
+}
+
+.error {
+  color: #c00 !important;
+  border: 1px solid #c00 !important;
+}
+
+/* styling for mobile phones */
+@media screen and (max-width: 480px) {
+  .app {
+    width: calc(100% - 5%) !important;
+  }
+  .card {
+    margin: 10px auto !important;
+  }
+  .username {
+    font-size: 15px;
+  }
+  .time_created {
+    font-size: 15px;
+  }
+}
